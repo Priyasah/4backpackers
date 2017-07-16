@@ -12,8 +12,9 @@
 <ul>
 <li> <a href="/blogs/show">blogs</a></li>
 <li> <a href="">diaries</a></li>
-<li> <a href="/faq">FAQ</a></li>
-<li> <a href="">Contacts</a>
+
+<li><%= link_to 'FAQ', page_path('faq') %></li>
+<li><%= link_to 'Contacts', page_path('contacts') %></li>
 <% if user_signed_in? %>
 <li><a href="">Dashboard</a></li>
 <li>  <%= link_to "Sign Out",destroy_user_session_path,method: :delete %></li>

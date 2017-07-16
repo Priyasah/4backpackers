@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'blogs/create' => 'blogs#create'
   get 'blogs/show'
   get 'home/index'
+  get 'pages/home' => 'high_voltage/pages#show', id: 'faq'
+  get 'pages/home' => 'high_voltage/pages#show', id: 'contacts'
   resources :blogs
   devise_for :users
   root to: "home#index"
