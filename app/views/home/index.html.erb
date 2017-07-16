@@ -1,0 +1,37 @@
+
+<header>
+
+<div class="logo">
+<%= image_tag 'images.png' %>
+
+</div>
+
+
+<nav>
+
+<ul>
+<li> <a href="/blogs/show">blogs</a></li>
+<li> <a href="">diaries</a></li>
+<li> <a href="/faq">FAQ</a></li>
+<li> <a href="">Contacts</a>
+<% if user_signed_in? %>
+<li><a href="">Dashboard</a></li>
+<li>  <%= link_to "Sign Out",destroy_user_session_path,method: :delete %></li>
+<% else %>
+<li><a href="">Tour</a></li>
+
+<li> <%= link_to "Log In",new_user_session_path,method: :get %></li>
+<% end %>
+
+</ul>
+</nav>
+
+
+</header>
+
+<body>
+<% if user_signed_in? %>
+	<a href="">start a new diary</a>
+	<a href="/blogs/create"> start a new blog</a>
+
+<% end %>

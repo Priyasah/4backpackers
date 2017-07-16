@@ -1,0 +1,9 @@
+
+<% @blogs.each do |b| %>
+
+<%= render 'blog', blog: b %>
+
+<% end %>
+
+
+<%= link_to "Create blog", url_for(controller: :blogs, action: :create), method: :get %>
